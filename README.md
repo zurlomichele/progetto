@@ -1,2 +1,2 @@
-# progetto
+# PROGETTO
 Progetto programmazione ad oggetti
