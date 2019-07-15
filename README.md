@@ -20,9 +20,9 @@ Each line is described by the following attributes:
 11) Standard_Error_of_modelled_annual_expenditure
 
 - **on request:**  using API REST GET or POST (with separate routes) using Spring Boot are returned:  
- - metadata (JSON format) or list of attributes and type;  
- - data (JSON format);  
- - statistics on data (JSON format) which specifying the attribute on which  - the computation is carried out, such as:  
+  - metadata (JSON format) or list of attributes and type;  
+  - data (JSON format);  
+  - statistics on data (JSON format) which specifying the attribute on which  - the computation is carried out, such as:  
 1) Numbers: avg, min, max, dev std, sum, count  
 2) Strings: Counting of unique elements (for each unique element the number of occurrences is indicated);  
 Finally, the restitution foresees the possibility to specify during the request a series of filters on attributes with conditional and logical operators.
