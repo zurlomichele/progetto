@@ -3,7 +3,7 @@ The objective of our project was the creation of a JAVA application that has as 
 The data-set assigned by the lecturers shows the funding, divided by nation, provided by the European Union.
 To meet these purposes, our application is based on the following features:
 - **on startup:** downloads the data-set (which contains data in CSV format starting from the address provided after decoding the JSON which contains the URL useful for downloading the file). This operation is carried out only at the start of the application, moreover, where the dataset is already present in memory, it is not downloaded again;
-  - **at the end of the download:** performs data parsing by mapping each data-set record into an object of a class, paying particular attention to the different separator characters;
+- **at the end of the download:** performs data parsing by mapping each data-set record into an object of a class, paying particular attention to the different separator characters;
 The CSVParser class is used to read and analyze the CSV file and to fill a payment vector and a metadata vector.
 Each row represents a loan and each column header represents a metadata.
 Each line is described by the following attributes:
