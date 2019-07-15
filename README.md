@@ -20,4 +20,4 @@ Each line is described by the following attributes:
 11) Standard_Error_of_modelled_annual_expenditure
 
 There is some wrong field and therefore some data is managed in a dedicated way in order to be corrected. Then follow these manual manipulation operations on the CSV data:
-#inserire qua codice che gestisce regex e rimpiazza con lo zero i campi vuoti!
+# inserire qua codice che gestisce regex e rimpiazza con lo zero i campi vuoti!
