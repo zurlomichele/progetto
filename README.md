@@ -23,13 +23,64 @@ Each line is described by the following attributes:
   - metadata (JSON format) or list of attributes and type;  
   - data (JSON format);  
   - statistics on the data (JSON format) that specifying the attribute on which to perform the computation (data column) such as:
-1) Numbers: avg, min, max, dev std, sum, count  
-2) Strings: Counting of unique elements (for each unique element the number of occurrences is indicated);  
+   1) Numbers: avg, min, max, dev std, sum, count  
+   2) Strings: Counting of unique elements (for each unique element the number of occurrences is indicated);  
 Finally, the restitution foresees the possibility to specify during the request a series of filters on attributes with conditional and logical operators.
 Next, the various requests that can be performed with relevant examples will be listed.
 Examples refer to the query or body of POST (JSON).
 Furthermore, the implementation methods of the statistics and filters are shown and some examples of tests useful for verifying the implemented functions are listed.
 
 WARNING: there are some wrong fields and therefore some data is managed in a dedicated way in order to be corrected. Then follow these manual manipulation operations on the CSV data:
-# inserire qua codice che gestisce regex e rimpiazza con lo zero i campi vuoti!
+```
+public static String convString(String s) {
+         if (s.equals(""))
+             s = "0";
+         return s;
+```
 
+Furthermore, regular expressions are adopted in order to obtain a correct reading of the file. Following is the syntax of the RegEx pattern used:
+
+```
+private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
+```
+
+
+
+
+## GET REQUESTS
+
+### /showdataset
+This request return all the data-set.
+
+### /showmetadata
+This request return all header of the data-set.
+
+### /stats/{fieldName}
+Gives statistics on numbers based on the class  _DataStatistics_:
+
+-   Average
+-   Minimum
+-   Maximum
+-   Standard Deviation
+-   Sum
+
+```
+ count = store.size();
+            min = store.get(0);
+            max = store.get(0);
+            for (Integer item : store) {
+                avg += item;
+                if (item < min)
+                    min = item;
+                if (item > max)
+                    max = item;
+                sum += item;
+            }
+            avg = avg / count;
+            for(Integer item:store){
+                std+=(item-avg)*(item-avg);
+            }
+            std = Math.sqrt(std/(count));
+            
+          return new DataStatistics(avg, min, max, std, sum);
+```
