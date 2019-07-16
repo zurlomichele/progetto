@@ -43,3 +43,15 @@ Furthermore, regular expressions are adopted in order to obtain a correct readin
 ```
 private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
 ```
+
+
+
+
+# GET Requests
+
+
+**/showdataset**
+This request return all the data-set.
+
+**/showmetadata**
+This request return all header of the data-set.
