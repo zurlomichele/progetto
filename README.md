@@ -83,5 +83,3 @@ Gives statistics on numbers based on the class  _DataStatistics_:
             std = Math.sqrt(std/(count));
             
           return new DataStatistics(avg, min, max, std, sum);
-
-
