@@ -43,14 +43,3 @@ Furthermore, regular expressions are adopted in order to obtain a correct readin
 ```
 private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
 ```
-
-
-
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
