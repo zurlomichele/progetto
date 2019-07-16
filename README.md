@@ -54,3 +54,12 @@ This request return all the data-set.
 
 ### /showmetadata
 This request return all header of the data-set.
+
+Gives statistics on numbers based on the class  _DataFiltering_:
+
+-   Average
+-   Minimum
+-   Maximum
+-   Standard Deviation
+-   Sum
+
