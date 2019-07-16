@@ -31,5 +31,9 @@ Examples refer to the query or body of POST (JSON).
 Furthermore, the implementation methods of the statistics and filters are shown and some examples of tests useful for verifying the implemented functions are listed.
 
 WARNING: there are some wrong fields and therefore some data is managed in a dedicated way in order to be corrected. Then follow these manual manipulation operations on the CSV data:
-# inserire qua codice che gestisce regex e rimpiazza con lo zero i campi vuoti!
-
+```
+public static String convString(String s) {
+         if (s.equals(""))
+             s = "0";
+         return s;
+```
