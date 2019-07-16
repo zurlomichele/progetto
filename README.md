@@ -47,11 +47,11 @@ private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
 
 
 
-# GET Requests
+# GET REQUESTS
 
 
-**/showdataset**
+ # /showdataset
 This request return all the data-set.
 
-**/showmetadata**
+ # /showmetadata
 This request return all header of the data-set.
