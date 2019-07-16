@@ -56,11 +56,32 @@ This request return all the data-set.
 This request return all header of the data-set.
 
 ### /stats/{fieldName}
-Gives statistics on numbers based on the class  _DataFiltering_:
+Gives statistics on numbers based on the class  _DataStatistics_:
 
 -   Average
 -   Minimum
 -   Maximum
 -   Standard Deviation
 -   Sum
+
+```
+ count = store.size();
+            min = store.get(0);
+            max = store.get(0);
+            for (Integer item : store) {
+                avg += item;
+                if (item < min)
+                    min = item;
+                if (item > max)
+                    max = item;
+                sum += item;
+            }
+            avg = avg / count;
+            for(Integer item:store){
+                std+=(item-avg)*(item-avg);
+            }
+            std = Math.sqrt(std/(count));
+            
+          return new DataStatistics(avg, min, max, std, sum);
+
 
