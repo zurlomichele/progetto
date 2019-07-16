@@ -23,8 +23,8 @@ Each line is described by the following attributes:
   - metadata (JSON format) or list of attributes and type;  
   - data (JSON format);  
   - statistics on the data (JSON format) that specifying the attribute on which to perform the computation (data column) such as:
-  1) Numbers: avg, min, max, dev std, sum, count  
-  2) Strings: Counting of unique elements (for each unique element the number of occurrences is indicated);  
+   1) Numbers: avg, min, max, dev std, sum, count  
+   2) Strings: Counting of unique elements (for each unique element the number of occurrences is indicated);  
 Finally, the restitution foresees the possibility to specify during the request a series of filters on attributes with conditional and logical operators.
 Next, the various requests that can be performed with relevant examples will be listed.
 Examples refer to the query or body of POST (JSON).
