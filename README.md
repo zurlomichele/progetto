@@ -37,3 +37,9 @@ public static String convString(String s) {
              s = "0";
          return s;
 ```
+
+Furthermore, regular expressions are adopted in order to obtain a correct reading of the file. Following is the syntax of the RegEx pattern used:
+
+```
+private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
+```
