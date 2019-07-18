@@ -36,7 +36,7 @@ Examples refer to the query or body of POST (JSON).
 Furthermore, the implementation methods of the statistics and filters are shown and some examples of tests useful for verifying the implemented functions are listed.
 
 WARNING: there are some wrong fields and therefore some data is managed in a dedicated way in order to be corrected. Then follow these manual manipulation operations on the CSV data:
-```
+``` java
 public static String convString(String s) {
          if (s.equals(""))
              s = "0";
@@ -45,7 +45,7 @@ public static String convString(String s) {
 
 Furthermore, regular expressions are adopted in order to obtain a correct reading of the file. Following is the syntax of the RegEx pattern used:
 
-```
+``` java
 private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
 ```
 
@@ -68,11 +68,11 @@ Gives statistics on numbers fields of our CSV, based on the class  _DataStatisti
 
 NOTE: this command must be used only on numeric fields!
 
-```
+``` java
 results = calculate(store);
 ```
 
-```
+``` java
  private Vector<Object> calculate(Vector<Integer> store) {
         Integer count = store.size();
         Integer min = store.get(0);
@@ -105,7 +105,7 @@ results = calculate(store);
     }   
 ```
 
-```
+``` java
 return new DataStatistics((double)results.get(0), (int)results.get(1), (int)results.get(2), (double)results.get(3), (long)results.get(4));
 ```
 
@@ -115,7 +115,7 @@ _example of use:_
 
 _response:_
 
-```
+``` json
 {
         "avg": 2004.8884111095447,
         "min": 1986,
@@ -130,7 +130,7 @@ _response:_
 
 Returns the number of times the string of the specified field occourred.
 It needs a field name in the query path and a value to confront in the query params.
-```
+``` java
 (@PathVariable String fieldName, @RequestParam(value = "value") String value)
 ```
 _example of use:_
@@ -139,7 +139,7 @@ _example of use:_
 
 _response:_
 
-```
+``` json
 {
     "count": 136
 }
@@ -156,7 +156,7 @@ The conditional operator "$and" filter the data-set recursively for each JSON re
 
 _$or code:_
 
-```
+``` java
 for (Object obj : jsonArray) {
                 filterParam.readFields(obj);
                 appOr = paymentService.filter(paymentService.getPayments(), filterParam);
@@ -168,7 +168,7 @@ for (Object obj : jsonArray) {
 ```    
 _$and code:_
 
-```
+``` java
  for (Object obj : jsonArray) {
                 filterParam.readFields(obj);
                 // iteration on filter method, for each new cycle we use as vector to
@@ -182,7 +182,7 @@ _example of use:_
 > localhost:8080/filter
 
 _JSON body:_
-```  
+```  json
 {
             "fieldName": "Fund",
             "operator": "==",
@@ -191,7 +191,7 @@ _JSON body:_
  ```  
  
 _JSON body:_
-```  
+```  json
  {
      "$and": [
          {
@@ -208,7 +208,7 @@ _JSON body:_
  }
 ``` 
 _JSON body:_
-```  
+```  json
   {
       "$or": [
           {
@@ -227,7 +227,7 @@ _JSON body:_
 This multiple filter example also implements the conditional operator between, moreover is possible to apply this filter with different field names.
 
 _JSON body:_
-```  
+```  json
 {
     "$or": [
         {
@@ -244,7 +244,7 @@ _JSON body:_
 }
  ```  
 Another example of multiple filter using more JSON objects is:
- ```  
+ ```  json
 {
     "$and": [
         {
@@ -274,7 +274,7 @@ _example of use:_
 > localhost:8080/filter/statistics/PeriodEnd
 
 _JSON body:_
-```
+``` json
 {
     "$and": [
      
@@ -293,7 +293,7 @@ _JSON body:_
 ```
 _response:_
 
-```
+``` json
 {
     "avg": 2000.9354838709678,
     "min": 1993,
@@ -321,7 +321,7 @@ Here's some example of error notification:
 
     _JSON body:_
 
-   ```
+   ``` json
     {
         "fieldName": "Fond",
          "operator": "==",
@@ -334,7 +334,7 @@ Here's some example of error notification:
 - > localhost:8080/filter/
 
     _JSON body:_
-    ```
+    ``` json
     {
     "fieldName": "Fund",
     "operator": ">=",
@@ -349,7 +349,7 @@ Here's some example of error notification:
 - > localhost:8080/filter/
 
     _JSON body:_
-    ```
+    ``` json
     {
     "or": [
      
@@ -374,7 +374,7 @@ Here's some example of error notification:
 
     _JSON body:_
 
-    ```
+    ``` json
     {
         "fieldName": "Year",
         "operator": "===",
@@ -392,7 +392,21 @@ Here's some example of error notification:
     The following message is displayed if your request contain only "Period".   
     
     ``` "Devi specificare PeriodStart o PeriodEnd" ```
+## UML
+
+- [UML Class Diagram](inserire_link)
+
+- [UML Use Case Diagram](inserire_link)
+
+- [UML Sequence Diagram](inserire_link)    
+
+
+### The whole work was done by:
+- Alessandro Illuminati
+- Michele Zurlo
     
+© All rights are reserved to their respective owners. 
+
               
               
                      
