@@ -1,5 +1,5 @@
 # Object Oriented Programming Project
-The objective of our project was the creation of a JAVA application that has as its main purpose the creation of a set of classes capable of modeling a specific assigned data-set into objects.
+The main purpose of our project was the creation of a JAVA application capable of modeling a specific assigned data-set into objects (defining a set of classes) and then filter and get statistics from the data.
 The data-set assigned by the lecturers shows the funding, divided by nation, provided by the European Union.
 To meet these purposes, our application is based on the following features:
 - **on startup:** downloads the data-set (which contains data in CSV format starting from the address provided after decoding the JSON which contains the URL useful for downloading the file). This operation is carried out only at the start of the application, moreover, where the dataset is already present in memory, it is not downloaded again;
@@ -18,6 +18,11 @@ Each line is described by the following attributes:
 9)  Modelled_annual_expenditure
 10) Standard_Deviation_of_annual_expenditure
 11) Standard_Error_of_modelled_annual_expenditure
+
+
+We decided to represent the column "Programming Period" of the CSV as a separated object in such a way that
+a row of the CSV is representing by an object of the class "Payment" and each of these contain an object of the class "ProgrammingPeriod".
+This choice gave to the user the possibility to filter the data-set also for the start/end of the Programming Period stated in the CSV.
 
 - **on request:**  using API REST GET or POST (with separate routes) using Spring Boot are returned:  
   - metadata (JSON format) or list of attributes and type;  
