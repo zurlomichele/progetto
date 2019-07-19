@@ -394,11 +394,18 @@ Here's some example of error notification:
     ``` "Devi specificare PeriodStart o PeriodEnd" ```
 ## UML
 
-- [UML Class Diagram](inserire_link)
+1) [UML Use Case Diagram](https://drive.google.com/file/d/1jjNpb1hP0oUcE1aNCSdteJ7YkOBO130W/view?usp=sharing)
 
-- [UML Use Case Diagram](https://drive.google.com/file/d/1jjNpb1hP0oUcE1aNCSdteJ7YkOBO130W/view?usp=sharing)
+2)  [UML Sequence Diagram](inserire_link) 
 
-- [UML Sequence Diagram](inserire_link)    
+3) #### UML Class Diagram
+
+- [PROJECT FOLDER](https://drive.google.com/file/d/18J_jcwsflYLqtA3btzebsAb71EV9P9z1/view?usp=sharing)
+- [MAIN PACKAGE: com.example.progetto](https://drive.google.com/file/d/1mBf6pstxePs2tSEHRRzffVzB9raA0eKi/view?usp=sharing)
+- [SUBPACKAGE: controller](https://drive.google.com/file/d/128k9uPV4EBTu3ACTlwuC5jtmFlFidXJd/view?usp=sharing)
+- [SUBPACKAGE: csv](https://drive.google.com/file/d/1wkCoYw7SQgNGwR6T79X5GCBw1IbmHmvD/view?usp=sharing)
+- [SUBPACKAGE: model ](https://drive.google.com/file/d/1icfE7fAUKtMK4rZuiirgW7Fq_3KjA2mR/view?usp=sharing)
+- [SUBPACKAGE: service](https://drive.google.com/file/d/1BIMFgtl2g9JeyEQ6zMdEKiODtaHQ6UyP/view?usp=sharing)
 
 
 ### The whole work was done by:
@@ -406,7 +413,3 @@ Here's some example of error notification:
 - Michele Zurlo
     
 © All rights are reserved to their respective owners. 
-
-              
-              
-                     
