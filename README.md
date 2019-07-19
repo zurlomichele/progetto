@@ -393,10 +393,10 @@ Here's some example of error notification:
     
     ``` "Devi specificare PeriodStart o PeriodEnd" ```
 ## UML
+NOTE: for the UML sequence diagram we reported two examples of use of our application: first one is a GET request: localhost:8080/statistics/Year , second one is a POST request: localhost:8080/filter with the JSON body specified in the image of the diagram. This is because the behaviour of our application changes on the particular input inserted by the user.
+1) [UML Use Case Diagram](https://drive.google.com/file/d/1XbLZq--sS05Edmp1BFgYxXPXBHkxK_tI/view?usp=sharing)
 
-1) [UML Use Case Diagram](https://drive.google.com/file/d/1jjNpb1hP0oUcE1aNCSdteJ7YkOBO130W/view?usp=sharing)
-
-2)  [UML Sequence Diagram](inserire_link) 
+2)  [UML Sequence Diagram](https://drive.google.com/file/d/1jubDh92vhYZt6XE9dxJR1btkZ9i6Qlsp/view?usp=sharing) 
 
 3) #### UML Class Diagram
 
