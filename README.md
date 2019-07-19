@@ -48,7 +48,7 @@ Furthermore, regular expressions are adopted in order to obtain a correct readin
 ``` java
 private String cvsSplitBy = ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)";
 ```
-
+NOTE: there are also several inline comments in the code to describe the functionality  of same specific declarations.
 ## GET REQUESTS
 
 ### /showdataset
